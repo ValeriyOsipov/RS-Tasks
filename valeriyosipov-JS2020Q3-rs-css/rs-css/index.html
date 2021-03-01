@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>RS Селекторы</title>
+</head>
+<body class="body flex flex_row">
+  <section class="main flex flex_column flex_center">
+    <div class="task"></div>
+    <div class="game_area flex flex_center">
+      <div class="assembly_line_surface flex flex_center">
+        <div class="assembly_line flex flex_row flex_center">
+        </div>
+      </div>
+    </div>
+    <div class="element_tag"></div>
+    <div class="editor flex flex_row">
+      <div class="css_editor editor_windows">
+        <div class="css_editor_header editor_headers">CSS Editor</div>
+        <div class="css_editor_wrapper flex flex_row">
+          <div class="lines_column faded_font">
+            1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>
+            11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>
+          </div>
+          <div class="css_editor_input_wrapper">
+            <input class="answer blink" type="text" placeholder="Write your selector here">
+            <div class="faded_font">
+              {<br>/* Styles */<br>}
+              <br><br><br>
+              /* Type a selector and press enter. If it fits, you will progress to the next level.<br>
+              If you cannot find a solution, click the help button to see the answer. */
+            </div>
+          </div>
+          <div class="buttons_column flex flex_column flex_center">
+            <div class="button_wrapper">
+              <div class="enter_button button">enter</div>
+            </div>
+            <div class="button_wrapper">
+              <div class="help_button button">help</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="html_viewer editor_windows">
+        <div class="html_viewer_header editor_headers">HTML Viewer</div>
+        <div class="html_viewer_wrapper flex flex_row">
+          <div class="lines_column faded_font">
+            1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>
+            11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>
+          </div>
+          <div class="html_markup faded_font"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer flex flex_row">
+      <a href="https://github.com/ValeriyOsipov" class="footerLink">github: ValeriyOsipov</a>
+      2020
+      <a href="https://rs.school/js/"><img src="assets/rs_school_js.svg" alt="logo" class="schoolLogo"></a>
+      <a href="https://rs.school/js/" class="footerLink">rs.school</a>
+    </div>
+  </section>
+
+  <aside class="aside">
+    <div class="aside_wrapper">
+      <div class="aside_header flex flex_row">
+        <div class="aside_header_text flex flex_row">
+          Level 1 of 21
+          <div class="check"></div>  
+        </div>
+        <div class="aside_nav flex flex_row">
+          <div class="prev_wrapper">
+            <div class="nav prev"></div>
+          </div>
+          <div class="next_wrapper">
+            <div class="nav next"></div>
+          </div>
+        </div>
+      </div>
+      <div class="aside_text"></div>
+    </div>
+    <div class="menu_wrapper flex flex_column">
+      <div class="menu_header">Select level</div>
+      <div class="levels">
+      </div>
+      <div class="reset_button button">Reset progress</div>
+    </div>
+  </aside>
+  <div class="shield"></div>
+  <script src="script.js"></script>
+</body>
+</html>

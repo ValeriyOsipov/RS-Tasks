@@ -1,0 +1,512 @@
+@font-face{
+    font-family: ComicHelvetic;
+    font-style: normal;
+	  font-weight: normal;
+    src: url("assets/ComicHelvetic.otf");
+}
+
+@font-face{
+    font-family: Menlo-Regular;
+    font-style: normal;
+	  font-weight: normal;
+    src: url("assets/Menlo-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  height: 100vh;
+  flex-direction: row;
+  font-family: "ComicHelvetic", sans-serif;
+  color: #707070;
+}
+
+.faded_font {
+  color: rgba(70, 70, 70, 0.5);
+}
+
+.main {
+  width: 75vw;
+  background-color: #e1e6f9;
+}
+
+.aside {
+  width: 25vw;
+  background-color: #e1dbf5;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex_row {
+  flex-direction: row;
+}
+
+.flex_column {
+  flex-direction: column;
+}
+
+.flex_center {
+  align-items: center;
+}
+
+.task {
+  margin: 3vh 0;
+  font-size: 42px;
+  text-align: center;
+}
+
+.game_area {
+  height: 25vh;
+  margin-bottom: 3vh;
+}
+
+.editor {
+  background-color: #e8f1f0;
+  border: 10px solid #e8f1f0;
+  border-radius: 5px;
+  font-family: "Menlo-Regular";
+  line-height: 150%;
+  font-size: 14px;
+}
+
+.editor_windows {
+  width: 35vw;
+  border: 2px solid #e1dbf5;
+}
+
+.editor_headers {
+  padding: 5px;
+  border-bottom: 2px solid #e1dbf5;
+}
+
+.lines_column {
+  text-align: right;
+  padding: 5px;
+  border-right: 2px solid #e1dbf5;
+  width: 1.5vw;
+}
+
+.css_editor {
+  border-right: none;
+}
+
+.css_editor_input_wrapper {
+  width: 25vw;
+  padding: 5px;
+}
+
+.html_markup {
+  padding: 5px;
+}
+
+.answer {
+  width: 25vw;
+  font-family: "Menlo-Regular";
+  line-height: 150%;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: #e8f1f0;
+  color: #707070;
+}
+
+.buttons_column {
+  padding: 5px;
+  width: 8.5vw;
+}
+
+.button_wrapper {
+  height: 4vh;
+}
+
+.button {
+  border: 1px solid #e1dbf5;
+  border-radius: 2px;
+  border-width: 1px 1px 5px 1px;
+  font-size: 10px;
+  padding: 1px;
+  margin-bottom: 10px;
+  background-color: #d4ecea;
+  width: 4vw;
+  text-align: center;
+}
+
+.aside_wrapper {
+  margin: 10px;
+}
+
+.aside_header {
+  grid-template-columns: 60% 20% 20%;
+  font-size: 20px;
+  border-bottom: 2px solid rgba(70, 70, 70, 0.5);
+  margin-bottom: 2vh;
+  justify-content: space-between;
+}
+
+.aside_text {
+  height: 95px;
+  border-bottom: 2px solid rgba(70, 70, 70, 0.5);
+  margin-bottom: 2vh;
+}
+
+.check {
+  width: 8px;
+  height: 13px;
+  border: 3px solid rgba(70, 70, 70, 0.5);
+  border-width: 0 3px 3px 0;
+  transform: rotate(40deg);
+  margin-left:5px;
+}
+
+.nav {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #707070;
+  border-width: 2px 2px 0 0;
+  margin-top: 3px;
+}
+
+.prev {
+  transform: rotate(-135deg);
+}
+
+.next {
+  transform: rotate(45deg);
+}
+
+.menu_wrapper {
+  margin: 10px;
+}
+
+.menu_header {
+  font-size: 20px;
+  margin-bottom: 2vh;
+}
+
+.level_number {
+  margin: 0 5px;
+}
+
+.active {
+  text-decoration: underline;
+  font-weight: 500;
+  text-shadow: 5px 0 5px rgba(70, 70, 70, 0.1), 
+    0 5px 5px rgba(70, 70, 70, 0.1), 
+    -5px 0 5px rgba(70, 70, 70, 0.1), 
+    0 -5px 5px rgba(70, 70, 70, 0.1);
+}
+
+.reset_button {
+  border: 1px solid rgba(70, 70, 70, 0.5);
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 4px;
+  margin: 2vw 0 0;
+  background-color: #d4ecea;
+  width: 14vw;
+  align-self: center;
+  z-index: 10;
+}
+
+.assembly_line_surface {
+  width: 60vw;
+  height: 10vw;
+  background-image: 
+  linear-gradient(90deg, transparent 50%, #707070 50%, #707070 60%, transparent 60%), 
+  linear-gradient(90deg, #707070 10%, transparent 10%);
+  background-color:rgba(70, 70, 70, 0.5);
+  background-size: 2em 2em;
+  justify-content: center;
+}
+
+.assembly_line {
+  justify-content: center;
+  color: #e1e6f9;
+  font-size: 30px;
+  text-shadow: 1px 0 1px rgba(70, 70, 70, 0.5),
+    0 1px 1px rgba(70, 70, 70, 0.5),
+    -1px 0 1px rgba(70, 70, 70, 0.5),
+    0 -1px 1px rgba(70, 70, 70, 0.5);
+}
+
+.html_markup div {
+  padding-left: 1vw;
+}
+
+.html_markup > div {
+  padding-left: 0;
+}
+
+.element_tag {
+  display: none;
+  position: absolute;
+  background-color: #e8f1f0;
+  padding: 5px;
+  box-shadow: 0 0 3px 3px #707070;
+}
+
+.footer {
+  width: 40vw;
+  margin-top: 1vw;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.schoolLogo {
+  width: 9vw;
+  height: 3.3vh;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #707070;
+}
+
+.hovered_markup {
+  color: #707070;
+  font-weight: 600;
+}
+
+.hovered_element {
+  box-shadow: 0 0 5px 5px #e1e6f9;
+}
+
+.prev_wrapper, .next_wrapper, .level,
+.assembly_line *, .html_markup > div *, .button
+{
+  cursor: pointer;
+}
+
+.shield {
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  display: none;
+  position: fixed;
+}
+
+/* элементы игры*/
+
+box {
+  min-width: calc((2.5vw + 2.5vh));
+  min-height: calc((2.5vw + 2.5vh));
+  border: 3px solid darkgoldenrod;
+  margin: 0 1vw;
+  background-image: 
+  linear-gradient(-45deg, transparent 50%, #F1D0CB 50%, #F1D0CB 60%, transparent 60%), 
+  linear-gradient(-45deg, #F1D0CB 10%, transparent 10%);
+  background-color: bisque;
+  background-size: 1em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.round {
+  border-radius: 100px;
+}
+
+candy {
+  width: calc((1.5vw + 1.5vh));
+  height: calc((1.5vw + 1.5vh));
+  border-radius: 100px;
+  background-image: url("assets/violet-candy.jpg");
+  background-position: center center;
+  border: 1px solid #80008054;
+}
+
+.red {
+  background-image: url("assets/red-candy.jpg");
+}
+
+choco {
+  width: calc((1.5vw + 1.5vh));
+  height: calc((1.5vw + 1.5vh));
+  background-image: url("assets/chocolate-bar.png");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100%;
+}
+
+/* анимации */
+.animated_element {
+  animation: animated_element 1s infinite;
+}
+
+@keyframes animated_element {
+  50% {transform: scale(1.1);}
+}
+
+.blink {
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {background-color: #e1dbf5;}
+}
+
+.wrong {
+  animation: wrong 0.1s 3;
+}
+
+@keyframes wrong {
+  25% {transform: translateX(1vw);}
+  75% {transform: translateX(-1vw);}
+}
+
+.level_complete {
+  animation: level_complete 0.5s ease-out;
+}
+
+@keyframes level_complete {
+  100% {transform: translateY(-7vw); opacity: 0;}
+}
+
+.menu_click_animation {
+  animation: menu_click_animation 0.2s ease-in-out;
+}
+
+@keyframes menu_click_animation {
+  50% {transform: scale(0.95);}
+}
+
+.editor_buttons_animation {
+  animation: editor_buttons_animation 0.2s ease-in-out;
+}
+
+@keyframes editor_buttons_animation {
+  50% {transform: translateY(5px);  border-width: 1px;}
+}
+
+/* responsive */
+@media only screen and (max-width: 1280px) {
+  .task {
+    font-size: 36px;
+  }
+
+  .levels, .aside_text, .footer, .reset_button {
+    font-size: 14px;
+  }
+
+  .footer {
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .task {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .levels, .aside_text {
+    font-size: 12px;
+  }
+
+  .aside_header_text, .menu_header {
+    font-size: 18px;
+  }
+
+  .check {
+    width: 5px;
+    height: 9px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .levels, .aside_text {
+    font-size: 11px;
+  }
+
+  .aside_header_text, .menu_header {
+    font-size: 16px;
+  }
+
+  .nav {
+    width: 9px;
+    height: 9px;
+  }
+
+  .editor, .answer {
+    font-size: 12px;
+  }
+
+  .button {
+    font-size: 8px;
+  }
+
+  .reset_button {
+    font-size: 12px;
+  }
+
+  .game_area {
+    height: 20vh;
+  }
+
+  .footer {
+    margin-top: 4vh;
+  }
+
+  .css_editor {
+    width: 38vw;
+  }
+
+  .html_viewer {
+    width: 32vw;
+  }
+
+  .element_tag {
+    font-size: 12px;
+  }
+
+  .assembly_line_surface {
+    height: 13vw;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .levels, .aside_text {
+    font-size: 9px;
+  }
+
+  .task {
+    font-size: 24px;
+  }
+
+  .aside_header_text, .menu_header {
+    font-size: 11px;
+  }
+
+  .nav {
+    width: 6px;
+    height: 6px;
+  }
+
+  .editor, .answer {
+    font-size: 10px;
+  }
+
+  .button {
+    font-size: 7px;
+  }
+
+  .reset_button {
+    font-size: 9px;
+  }
+
+  .footer {
+    margin-top: 5vh;
+    font-size: 12px;
+  }
+
+  .assembly_line {
+    font-size: 24px;
+  }
+}
