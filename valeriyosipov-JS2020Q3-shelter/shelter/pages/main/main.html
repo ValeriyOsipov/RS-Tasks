@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shelter</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body class="flexCenter w1920">
+    <div class="headerContainer w1920 flexSpace">
+        <header class="w1200 flexSpace">
+            <h1>Cozy House</h1>
+            <a class="link logoLink">
+                <div class="logo flexSpace">
+                    <p class="logoTitle">Cozy House</p>
+                    <p class="logoSubtitle">Shelter for pets in Boston</p>
+                </div>
+            </a>
+            <nav class="nav flexSpace">
+                <a class="link navActive parL" href="#">About the shelter</a>
+                <a class="link navInactive parL" href="../pets/pets.html">Our pets</a>
+                <p class="navInactive parL">Help the shelter</p>
+                <p class="navInactive parL">Contacts</p>
+            </nav>
+            <div class="burger flexCenter" id="burger">
+                <div class="burger1"></div>
+                <div class="burger2"></div>
+            </div>
+        </header>
+        <div class="startScreen w1200 flexSpace">
+            <div class="startScreenContent flexSpace">
+                <h2 class="startHeader textShadow textStroke">Not only people need a house</h2>
+                <p class="parL startText textShadow textStroke">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
+                <a class="link linkButton" href="../pets/pets.html"><button class="button">Make a friend</button></a>
+            </div>
+            <img class="startScreenPuppy" src="../../assets/start-screen-puppy.png" alt="start-screen-puppy">
+        </div>
+
+        <div id="shade">
+            <div class="vertMenu flexCenter" id="vertMenu">
+                <nav class="vertNav flexCenter">
+                    <a class="link navActive parL" href="main.html">About the shelter</a>
+                    <a class="link navInactive parL" href="../pets/pets.html">Our pets</a>
+                    <p class="navInactive parL">Help the shelter</p>
+                    <p class="navInactive parL">Contacts</p>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <section class="about w1920 flexCenter">
+        <div class="aboutContent w1200 flexCenter">
+            <img class="aboutPets" src="../../assets/about-pets.png" alt="about-pets">
+            <div class="aboutText flexSpace">
+                <h3>About the shelter<br>“Cozy House”</h3>
+                <p class="parL">Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
+                <p class="parL">We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
+            </div>
+        </div>
+    </section> 
+        
+    <section class="pets w1920 flexCenter">
+        <div class="petsContent w1200 flexSpace">
+            <h3>Our friends who<br>are looking for a house</h3>
+            <div class="cardsWrap flexSpace">
+                <button class="navButton prev" id="prev"></button>
+                <div class="cardsGrid" id="cardsGrid">
+                    <div class="card card1 flexSpace" id="card1">
+                        <img class="cardPhoto" src="../../assets/pets-katrine.png" alt="katrine">
+                        <p class="petsCardTitle">Katrine</p>
+                        <button class="button petsCardButton">Learn more</button>
+                    </div>
+                    <div class="card card2 flexSpace" id="card2">
+                        <img class="cardPhoto" src="../../assets/pets-jennifer.png" alt="jennifer">
+                        <p class="petsCardTitle">Jennifer</p>
+                        <button class="button petsCardButton">Learn more</button>
+                    </div>
+                    <div class="card card3 flexSpace" id="card3">
+                        <img class="cardPhoto" src="../../assets/pets-woody.png" alt="woody">
+                        <p class="petsCardTitle">Woody</p>
+                        <button class="button petsCardButton">Learn more</button>
+                    </div>
+                </div>
+                <button class="navButton next" id="next"></button>
+            </div>
+            <a class="link" href="../pets/pets.html"><button class="button">Get to know the rest</button></a>
+        </div>
+    </section>
+
+    <div class="flexCenter" id="popupWrap">
+        <div class="popup flexSpace">
+            <img class="popupImg" id="popupImg" src="../../assets/pets-jennifer.png" alt="popupImg">
+            <div class="popupContent flexSpace" id="popupContent">
+                <div class="popupHeader">
+                    <h3 id="name">Name</h3>
+                    <h4 id="type">Type</h4>
+                </div>
+                <h5 id="descr">Description</h5>
+                <ul id="popupList">
+                    <li id="age"><p><b>Age: </b>Age</p></li>
+                    <li id="inoculations"><p><b>Inoculations: </b>Inoculations</p></li>
+                    <li id="diseases"><p><b>Diseases: </b>Diseases</p></li>
+                    <li id="parasites"><p><b>Parasites: </b>Parasites</p></li>
+                </ul>
+            </div>
+            <button class="navButton close" id="closeButton"></button>
+        </div>
+    </div>
+
+    <section class="help w1920 flexCenter">
+        <dev class="helpContent w1200 flexCenter">
+            <h3 class="helpText">How you can help<br>our shelter</h3>
+            <div class="helpList flexCenter">
+                <div class="helpCard flexCenter">
+                    <img class="helpCardImg" src="../../assets/icon-pet-food.svg" alt="Pet food">
+                    <h4>Pet food</h4>
+                </div>
+                <div class="helpCard flexCenter">
+                    <img class="helpCardImg" src="../../assets/icon-transportation.svg" alt="Transportation">
+                    <h4>Transportation</h4>
+                </div>
+                <div class="helpCard flexCenter">
+                    <img class="helpCardImg" src="../../assets/icon-toys.svg" alt="Toys">
+                    <h4>Toys</h4>
+                </div>
+                <div class="helpCard flexCenter">
+                    <img class="helpCardImg" src="../../assets/icon-bowls-and-cups.svg" alt="Bowls and cups">
+                    <h4>Bowls and cups</h4>
+                </div>
+                <div class="helpCard flexCenter">
+                    <img class="helpCardImg" src="../../assets/icon-shampoos.svg" alt="Shampoos">
+                    <h4>Shampoos</h4>
+                </div>
+                <div class="helpCard flexCenter">
+                    <img class="helpCardImg" src="../../assets/icon-vitamins.svg" alt="Vitamins">
+                    <h4>Vitamins</h4>
+                </div>
+                <div class="helpCard flexCenter">
+                    <img class="helpCardImg" src="../../assets/icon-medicines.svg" alt="Medicines">
+                    <h4>Medicines</h4>
+                </div>
+                <div class="helpCard flexCenter">
+                    <img class="helpCardImg" src="../../assets/icon-collars-leashes.svg" alt="Collars / leashes">
+                    <h4>Collars / leashes</h4>
+                </div>
+                <div class="helpCard flexCenter">
+                    <img class="helpCardImg" src="../../assets/icon-sleeping-area.svg" alt="Sleeping areas">
+                    <h4>Sleeping areas</h4>
+                </div>
+            </div>
+        </dev>
+    </section>
+
+    <section class="donation w1920 flexCenter">
+        <div class="donationContent w1200 flexCenter">
+            <img class="donationDog" src="../../assets/donation-dog.png" alt="donation-dog">
+            <div class="donationInformation flexSpace">
+                <h3>You can also make a donation</h3>
+                <h5>Name of the bank / Type of bank account</h5>
+                <div class="creditCard flexCenter">
+                    <img class="creditCardImg" src="../../assets/credit-card.png" alt="credit-card">
+                    <h4><a class="cardNumber" href="#">8380 2880 8028 8791 7435</a></h4>
+                </div>
+                <p class="parS">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w1920 flexCenter">
+        <div class="footerContent w1200 flexSpace">
+            <div class="contacts flexSpace">
+                <h3 class="whiteText">For questions<br>and suggestions</h3>
+                <div class="email flexCenter">
+                    <a class="link" href="mailto:email@shelter.com"><img class="emailImg icon" src="../../assets/icon-email.png" alt="icon-email"></a>
+                    <a class="link" href="mailto:email@shelter.com"><h4 class="primaryText">email@shelter.com</h4></a>
+                </div>
+                <div class="phone flexCenter">
+                    <a class="link" href="tel:+136745677554"><img class="phoneImg icon" src="../../assets/icon-phone.png" alt="icon-phone"></a>
+                    <a class="link" href="tel:+136745677554"><h4 class="primaryText">+13 674 567 75 54</h4></a>
+                </div>
+            </div>
+            <div class="location flexSpace">
+                <h3 class="whiteText">We are waiting for your visit</h3>
+                <div class="loc1 flexCenter">
+                    <a class="link" href="https://goo.gl/maps/JSNhWuFkQVLxmXqy7"><img class="locImg icon" src="../../assets/icon-marker.png" alt="icon-loc"></a>
+                    <a class="link" href="https://goo.gl/maps/JSNhWuFkQVLxmXqy7"><h4 class="primaryText">1 Central Street, Boston<br>(entrance from the store)</h4></a>
+                </div>
+                <div class="loc2 flexCenter">
+                    <a class="link" href="https://goo.gl/maps/EG1nt6DPUdBFrqhq5"><img class="locImg icon" src="../../assets/icon-marker.png" alt="icon-loc"></a>
+                    <a class="link" href="https://goo.gl/maps/EG1nt6DPUdBFrqhq5"><h4 class="primaryText">18 South Park, London</h4></a>
+                </div>
+            </div>
+            <img class="footerPuppy" src="../../assets/footer-puppy.png" alt="footer-puppy">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
