@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  position: relative;
+  background-color: white;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 5vh;
+  width: 100vw;
+  font-size: 30px;
+}
+
+.selected-section {
+  height: 12vh;
+  width: 68vw;
+}
+
+.table-section {
+  height: 88vh;
+  width: 28vw;
+}
+
+.map-section {
+  height: 37vh;
+  width: 68vw;
+}
+
+.charts-section {
+  height: 37vh;
+  width: 68vw;
+}
+
+.main-table {
+  height: 78vh;
+  min-width: calc(28vw - 12px);
+  overflow: auto;
+}
+
+.map-wrapper, .charts-wrapper {
+  height: 27vh;
+  width: 50vw;
+  margin-bottom: 5px;
+}
+
+
+.flag {
+  height: 12px;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.school-logo {
+  height: 4vh;
+  width: 5vw;
+}
+
+th, td {
+  width: 5vw;
+  text-align: start;
+}
+
+td:first-child, .extended{
+  width: 10vw;
+}
+
+.border {
+  border: 2px solid rgba(255, 0, 51, 0.5);
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.sections-content {
+  position: relative;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px); 
+}
+
+.rb1 {
+  margin-right: 20px;
+}
+
+.footer {
+  height: 5vh;
+  width: 50vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-link {
+  color: black;
+}
+
+.radio:hover, label:hover, .sort:hover, .button:hover {
+  cursor: pointer;
+}
+
+.rb {
+  margin: 5px 0;
+}
+
+.selected-table {
+  border-collapse: collapse;
+}
+
+.selected-table tr, .selected-table th, .selected-table td {
+  border: 1px solid rgba(255, 0, 51, 0.5);
+  padding-left: 5px;
+}
+
+.selected-table td:first-child {
+  width: 18vw;
+}
+
+.active {
+  background-color: rgba(255, 0, 51, 0.3);
+}
+
+.button {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid black;
+  border-radius: 100%;
+  background: url(./assets/full.svg);
+}
+
+@media only screen and (max-width: 1023px) {
+  *:not(.header) {
+    font-size: 14px;
+  }
+
+  .leaflet-popup-content {
+    font-size: 12px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .table-section {
+    align-self: center;
+    width: 68vw;
+    height: 40vh;
+  }
+
+  .table-section * {
+    align-self: center;
+  }
+
+  .main-table {
+    height: 28vh;
+  }
+
+  .main-table th, .main-table td {
+    width: 10vw;
+  }
+
+  .main-table .extended, .main-table td:first-child {
+    width: 15vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  *:not(.header) {
+    font-size: 12px;
+  }
+
+  .header {
+    font-size: 24px;
+  }
+
+  .leaflet-popup-content {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="leaflet.css" />
+  <script src="leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.bundle.min.js"></script>
+  <title>COVID-19 Dashboard</title>
+</head>
+<body class="body flex flex-column flex-center">
+  <header class="header flex flex-center">COVID-19 Dashboard, last update: </header>
+
+  <section class="content flex flex-row">
+    <section class="placeholder table-section border">
+      <section class="table-section-content sections-content">
+        <input type="text" class="search" placeholder="Search country">
+        <div class="table-rb rb flex flex-row">
+          <div class="table-rb1 rb1">
+            <input type="radio" class="radio cumulative" id="cumulative-2" name="daily-or-cumulative-2" value="cumulative" checked>
+            <label for="cumulative-2">Cumulative</label><br>
+            <input type="radio" class="radio daily" id="daily-2" name="daily-or-cumulative-2" value="daily">
+            <label for="daily-2">Daily</label>
+          </div>
+          <div class="table-rb2">
+            <input type="radio" class="radio abs" id="abs-2" name="abs-or-p100k-2" value="abs" checked>
+            <label for="abs-2">Absolute</label><br>
+            <input type="radio" class="radio p100k" id="p100k-2" name="abs-or-p100k-2" value="p100k">
+            <label for="p100k-2">Per 100k population</label>
+          </div>
+        </div>
+        <table class="main-table flex flex-column">
+          <tr>
+            <th class="extended">Country</th>
+              <th class="sort cases active">Cases</th>
+              <th class="sort deaths">Deaths</th>
+              <th class="sort recovered">Recovered</th>
+          </tr>
+        </table>
+        <div class="button"></div>
+      </section>
+    </section>
+
+    <section class="not-table-section flex flex-column">
+      <section class="placeholder selected-section border">
+        <section class="selected-section-content flex flex-column flex-center sections-content">
+          <table class="selected-table">
+            <tbody>
+              <tr>
+                <th class="extended">Country</th>
+                <th class="sort cases active">Cases</th>
+                <th class="sort deaths">Deaths</th>
+                <th class="sort recovered">Recovered</th>
+              </tr>
+            </tbody>
+            <tr>
+              <td class="country">Global</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </table>
+          <div class="selected-rb rb flex flex-row">
+            <div class="selected-rb1 rb1">
+              <input type="radio" class="radio cumulative" id="cumulative-1" name="daily-or-cumulative-1" value="cumulative" checked>
+              <label for="cumulative-1">Cumulative</label><br>
+              <input type="radio" class="radio daily" id="daily-1" name="daily-or-cumulative-1" value="daily">
+              <label for="daily-1">Daily</label>
+            </div>
+            <div class="selected-rb2">
+              <input type="radio" class="radio abs" id="abs-1" name="abs-or-p100k-1" value="abs" checked>
+              <label for="abs-1">Absolute</label><br>
+              <input type="radio" class="radio p100k" id="p100k-1" name="abs-or-p100k-1" value="p100k">
+              <label for="p100k-1">Per 100k population</label>
+            </div>
+          </div>
+          <div class="button"></div>
+        </section>
+      </section>
+
+      <section class="placeholder map-section border">
+        <section class="map-section-content flex flex-column flex-center sections-content">
+          <div class="map-wrapper" id="map"></div>
+          <table class="map-table flex flex-column">
+            <tr>
+              <th class="sort cases active">Cases</th>
+              <th class="sort deaths">Deaths</th>
+              <th class="sort recovered">Recovered</th>
+            </tr>
+          </table>
+          <div class="map-rb rb flex flex-row">
+            <div class="map-rb1 rb1">
+              <input type="radio" class="radio cumulative" id="cumulative-3" name="daily-or-cumulative-3" value="cumulative" checked>
+              <label for="cumulative-3">Cumulative</label><br>
+              <input type="radio" class="radio daily" id="daily-3" name="daily-or-cumulative-3" value="daily">
+              <label for="daily-3">Daily</label>
+            </div>
+            <div class="map-rb2">
+              <input type="radio" class="radio abs" id="abs-3" name="abs-or-p100k-3" value="abs" checked>
+              <label for="abs-3">Absolute</label><br>
+              <input type="radio" class="radio p100k" id="p100k-3" name="abs-or-p100k-3" value="p100k">
+              <label for="p100k-3">Per 100k population</label>
+            </div>
+          </div>
+          <div class="button"></div>
+        </section>
+      </section>
+
+      <section class="placeholder charts-section border">
+        <section class="charts-section-content flex flex-column flex-center sections-content">
+          <div class="charts-wrapper">
+            <canvas class="charts"></canvas>
+          </div>
+          <table class="charts-table flex flex-column">
+            <tr>
+              <th class="sort cases active">Cases</th>
+              <th class="sort deaths">Deaths</th>
+              <th class="sort recovered">Recovered</th>
+            </tr>
+          </table>
+          <div class="charts-rb rb flex flex-row">
+            <div class="charts-rb1 rb1">
+              <input type="radio" class="radio cumulative" id="cumulative-4" name="daily-or-cumulative-4" value="cumulative" checked>
+              <label for="cumulative-4">Cumulative</label><br>
+              <input type="radio" class="radio daily" id="daily-4" name="daily-or-cumulative-4" value="daily">
+              <label for="daily-4">Daily</label>
+            </div>
+            <div class="charts-rb2">
+              <input type="radio" class="radio abs" id="abs-4" name="abs-or-p100k-4" value="abs" checked>
+              <label for="abs-4">Absolute</label><br>
+              <input type="radio" class="radio p100k" id="p100k-4" name="abs-or-p100k-4" value="p100k">
+              <label for="p100k-4">Per 100k population</label>
+            </div>
+          </div>
+          <div class="button"></div>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <footer class="footer flex">
+      <a href="https://github.com/ValeriyOsipov" class="footer-link">github: ValeriyOsipov</a>
+      2020
+      <a href="https://rs.school/js/"><img src="assets/rs_school_js.svg" alt="logo" class="school-logo"></a>
+      <a href="https://rs.school/js/" class="footer-link">rs.school</a>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
