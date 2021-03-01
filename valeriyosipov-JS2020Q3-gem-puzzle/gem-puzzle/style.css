@@ -1,0 +1,270 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+    margin: 0;
+    color: maroon;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.main {
+    background-color: goldenrod;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid maroon;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+    margin: 3px;
+    padding: 0 6px;
+    height: 5vh;
+    border-radius: 5px;
+    border: 1px solid maroon;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, calc((70vh + 70vw) / 12));
+    grid-template-rows: repeat(4, calc((70vh + 70vw) / 12));
+    gap: 3px;
+    margin: 3px;
+}
+
+.grid_element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: khaki;
+    border-radius: 5px;
+    border: 1px solid maroon;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    width: calc((70vh + 70vw) / 12);
+    height: calc((70vh + 70vw) / 12);
+}
+
+.grid_element:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.empty {
+    background-color: goldenrod;
+    border: none;
+}
+
+.empty:hover {
+    cursor: unset;
+}
+
+.sound {
+    cursor: pointer;
+    background-image: url("assets/volume_up.svg");
+    width: 24px;
+    height: 24px;
+}
+
+.menu {
+    position: absolute;
+    z-index: 5;
+    height: 0;
+    width: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background-color: darkgoldenrod;
+    color: khaki;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 22px;
+}
+
+.menuWrap {
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu_element {
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu.animateOpen {
+    animation-duration: 0.5s;
+    animation-name: animateOpen;
+    transition-timing-function: ease;
+    animation-fill-mode: forwards;   
+}
+
+.menu.animateClose {
+    animation-duration: 0.5s;
+    animation-name: animateClose;
+    transition-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateOpen {
+    0% {width: 0; height: 0; opacity: 0;}
+    100% {width: 100%; height: 100%; opacity: 1;}
+}
+
+@keyframes animateClose {
+    0% {width: 100%; height: 100%; opacity: 1;}
+    100% {width: 0; height: 0; opacity: 0;}
+}
+
+select {
+    margin: 0 5px;
+    background-color: darkgoldenrod;
+    color: khaki;
+    outline: none;
+    border: 1px solid khaki;
+}
+
+span {
+    cursor: auto;
+}
+
+.msg {
+    position: absolute;
+    z-index: 15;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-flow: column;
+    background-color: darkgoldenrod;
+    color: maroon;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 25px;
+    font-weight: 700;
+    text-shadow: 1px 0 1px goldenrod, 
+        0 1px 1px goldenrod, 
+        -1px 0 1px goldenrod, 
+        0 -1px 1px goldenrod;
+}
+
+.newGameMsg {
+    margin: 5px 0;
+    text-decoration: underline;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.msg.msgOpen {
+    animation-duration: 0.5s;
+    animation-name: msgOpen;
+    transition-timing-function: ease;
+    animation-fill-mode: forwards;   
+}
+
+.msg.msgClose {
+    animation-duration: 0.5s;
+    animation-name: msgClose;
+    transition-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes msgOpen {
+    0% {width: 0; height: 0; opacity: 0;}
+    100% {width: 100%; height: 100%; opacity: 0.8;}
+}
+
+@keyframes msgClose {
+    0% {width: 100%; height: 100%; opacity: 0.8;}
+    100% {width: 0; height: 0; opacity: 0;}
+}
+
+.leaderboard {
+    position: absolute;
+    z-index: 15;
+    height: 0;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background-color: darkgoldenrod;
+    color: khaki;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.leaderboard.lbOpen {
+    animation-duration: 0.5s;
+    animation-name: lbOpen;
+    transition-timing-function: ease;
+    animation-fill-mode: forwards;   
+}
+
+.leaderboard.lbClose {
+    animation-duration: 0.5s;
+    animation-name: lbClose;
+    transition-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes lbOpen {
+    0% {width: 0; height: 0; opacity: 0;}
+    100% {width: 100%; height: 100%; opacity: 1;}
+}
+
+@keyframes lbClose {
+    0% {width: 100%; height: 100%; opacity: 1;}
+    100% {width: 0; height: 0; opacity: 0;}
+}
+
+table, th, td {
+    text-align: center;
+    border: 1px solid khaki;
+    border-collapse: collapse;
+    padding: 2px;
+}
+
+.closeLb {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.shield {
+    position: absolute;
+    z-index: 30;
+    height: 100%;
+    width: 100%;
+    display: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+  html{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header{
+    font-size: 12px;
+  }
+}
